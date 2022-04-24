@@ -63,6 +63,7 @@ async function run() {
 
         // Order Post API
         app.get('/orders', async (req, res) => {
+            console.log(req.headers.authorization);
             let query = {};
             const email = req.query.email;
             if (email) {
